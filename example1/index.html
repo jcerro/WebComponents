@@ -3,10 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <title>Example 1 - WebComponents</title>
-    <!-- INCLUDE WEBCOMPONENTS POLYFILLS -->
+    <!-- Include webcomponents polyfills library-->
     <script src="bower_components/webcomponentsjs/webcomponents.min.js"></script>
+    <link rel="import" href="webcomponents/panel-message.html" />
+    <link rel="import" href="webcomponents/panel-message-template.html" />
 </head>
 <body>
-    <h1>Webcomponents Example 1</h1>
+<style>
+    p {
+         background-color: black;
+         color: white;
+     }
+</style>
+    <h1>Webcomponents Example 1 with and without parameters</h1>
+    <p>My First Component</p>
+    <p>
+        <panel-message></panel-message>
+    </p>
+    <p>
+        <panel-message value="everybody"></panel-message>
+    </p>
+    <p>
+        <panel-message shadow="true" value="Shadowed content"></panel-message>
+    </p>
+    <p>
+        <panel-message-template></panel-message-template>
+    </p>
+    <template id="template">
+        <style>
+            p {
+                background-color: dodgerblue;
+                color: white;
+            }
+        </style>
+        <p>Template inside webcomponent</p>
+    </template>
 </body>
 </html>

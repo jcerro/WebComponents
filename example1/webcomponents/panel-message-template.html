@@ -1,0 +1,17 @@
+<script type="text/javascript">
+    var proto = Object.create(HTMLElement.prototype, {
+        createdCallback: {
+            value: function() {
+                var template = document.querySelector('#template');
+                //
+                //var clone = document.importNode(template.content, true);
+                var clone = template.cloneNode();
+                this.createShadowRoot().appendChild(clone);
+            }
+        }
+    });
+    document.registerElement('panel-message-template', {
+        prototype: proto
+    });
+</script>
+

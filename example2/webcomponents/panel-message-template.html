@@ -1,0 +1,30 @@
+<template>
+    <style>
+        p {
+            background-color: darkolivegreen;
+            color: white;
+        }
+    </style>
+    <p>Hi from template</p>
+</template>
+<script type="text/javascript">
+
+    //Obtain the base
+    var basePrototype= Object.create(HTMLElement.prototype);
+
+    //Obtain the template from current script ('_' to use de polyfills)
+    var templateContent = document._currentScript.ownerDocument.querySelector('template').content;
+
+    basePrototype.createdCallback = function() {
+        var clone = document.importNode(templateContent, true);
+        var shadow = this.createShadowRoot();
+
+        shadow.appendChild(clone);
+    };
+
+    //Register the element
+    document.registerElement('panel-message-template', {
+        prototype: basePrototype
+    });
+
+</script>

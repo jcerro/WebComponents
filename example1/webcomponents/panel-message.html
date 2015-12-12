@@ -1,0 +1,38 @@
+<script type="text/javascript">
+    //Obtain the proptotype of an HTML Element (base prototype)
+    var basePrototype = Object.create(HTMLElement.prototype);
+
+    //Event call after element's creation
+    basePrototype.createdCallback = function() {
+        console.log("Element created");
+        //Creates manually shadow DOM
+        var shadow = this.getAttribute('shadow');
+        if(shadow) {
+            //Creates a shadow root (on a element)
+            var shadowDom = this.createShadowRoot();
+            shadowDom.innerHTML = getValue(this);
+        }else {
+            this.innerHTML = getValue(this);
+        }
+
+        //Add a click event
+        this.addEventListener('click', function(event) {
+            alert('Click on the webcomponent');
+        });
+    };
+
+    function getValue(elem) {
+        //Get the value attribute
+        var value = elem.getAttribute('value');
+        if(value) {
+            return '<b>Hi ' + value + '</b>';
+        }else {
+            return 'Hi anonymous';
+        }
+    }
+
+    //Register the element and sets the prototipe
+    document.registerElement('panel-message', {
+        prototype: basePrototype
+    });
+</script>
