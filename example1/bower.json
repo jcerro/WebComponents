@@ -1,0 +1,22 @@
+{
+  "name": "WebComponents - Example 1",
+  "homepage": "https://github.com/jcerro/WebComponents",
+  "authors": [
+    "javier.cerro@panel.es"
+  ],
+  "description": "Example 1 for 101 Panel Tech Days",
+  "main": "index.html",
+  "moduleType": [],
+  "keywords": [
+    "webcomponents",
+    "panel"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
