@@ -2,7 +2,7 @@
 Web Components For 101 Panel Tech Days
 
 ## Pre-requisites
-To execute the examples we need to have install some software listed below
+To execute the examples we need to have install some software listed below. Every example has an index.html page which contains links to the examples. You must use NodeJS to start a small web server to run the examples in your machine
 
 ### NodeJS
 To install NodeJS:
