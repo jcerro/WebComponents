@@ -5,9 +5,17 @@ Web Components For 101 Panel Tech Days
 To execute the examples we need to have install some software listed below
 
 ### NodeJS
-### Bower
+To install NodeJS:
+ 1. [Go to nodejs homepage](https://nodejs.org)
+ 2. Download
+ 3. Install
 
-### Steps to install
+### Bower
+Bower is a package manager. To install follow the next steps:
+
+ 1. Open a terminal
+ 2. Execute
+    `$ npm install -g bower`
 
 ## Example 1
 Hello world example. Only shows some basic web component using native js and polyfills to make runnable in almost all browsers.
