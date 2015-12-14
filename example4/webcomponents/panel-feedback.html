@@ -1,0 +1,31 @@
+<!-- First tag with id -->
+<dom-module id="panel-feedback">
+    <!-- Template for the webcomponent: CSS -->
+    <style>
+        /*Style only applies to component*/
+        /*Style set full compoenent, in this case tag panel-feedback */
+        :host {
+
+        }
+
+        p {
+            font-weight: bold;
+        }
+    </style>
+    <!-- Template for the webcomponent: HTML -->
+    <template>
+        <p>First WebComponent with Polymer</p>
+        <!-- Accessing to internal tag content -->
+        <p>
+            <content></content>
+            <!-- Accessing to desired contents -->
+            <content select=".selector"></content>
+        </p>
+    </template>
+    <script>
+        Polymer({
+            //Set the component, must be equal to id in dom-module tag
+            is: 'panel-feedback'
+        });
+    </script>
+</dom-module>

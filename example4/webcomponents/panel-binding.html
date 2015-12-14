@@ -1,0 +1,13 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<dom-module id="panel-binding">
+    <template>
+        <!-- {{ property_name }} -->
+        <h1>Hola {{ nombre }}</h1>
+        Escribe tu nombre <input type="text" value="{{nombre::input}}" />
+    </template>
+    <script>
+        Polymer({
+            is: 'panel-binding'
+        });
+    </script>
+</dom-module>

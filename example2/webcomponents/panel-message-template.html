@@ -9,17 +9,29 @@
 </template>
 <script type="text/javascript">
 
-    //Obtain the base
+    //Obtain the base prototype
     var basePrototype= Object.create(HTMLElement.prototype);
 
     //Obtain the template from current script ('_' to use de polyfills)
     var templateContent = document._currentScript.ownerDocument.querySelector('template').content;
 
+    //Callback after component create
     basePrototype.createdCallback = function() {
+        //Clone the base element
         var clone = document.importNode(templateContent, true);
-        var shadow = this.createShadowRoot();
+        //Obtain the element contents
+        var elementContent = this.innerHTML;
+        //Load the data from tag to webcomponent
+        var paragraph = clone.querySelector('p')
+        paragraph.innerHTML = elementContent;
 
-        shadow.appendChild(clone);
+        //Create a shadow DOM and append the cloned template
+        this.createShadowRoot().appendChild(clone);
+
+        if(this.hasAttribute('color')) {
+            var color = this.getAttribute('color');
+            paragraph.style.backgroundColor = color;
+        }
     };
 
     //Register the element

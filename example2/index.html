@@ -5,10 +5,16 @@
     <title>Example 1 - WebComponents</title>
     <script src="bower_components/webcomponentsjs/webcomponents.min.js"></script>
     <link rel="import" href="webcomponents/panel-message-template.html" />
+    <style>
+        p {
+            color: red;
+        }
+    </style>
 </head>
 <body>
     <h1>Webcomponents Example 2</h1>
     <p>Foo paragraph</p>
-    <panel-message-template></panel-message-template>
+    <panel-message-template>Test 1</panel-message-template>
+    <panel-message-template color="blue">Test 2</panel-message-template>
 </body>
 </html>

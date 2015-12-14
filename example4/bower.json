@@ -1,0 +1,27 @@
+{
+  "name": "Webcomponents - Example 4",
+  "homepage": "https://github.com/jcerro/WebComponents",
+  "authors": [
+    "javier.cerro@panel.es"
+  ],
+  "description": "Example 4 for 101 Panel Tech Days",
+  "main": "index.html",
+  "moduleType": [],
+  "keywords": [
+    "webcomponents",
+    "panel"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "google-map": "GoogleWebComponents/google-map#~1.1.7",
+    "paper-slider": "PolymerElements/paper-slider#~1.0.8",
+    "iron-icons": "PolymerElements/iron-icons#~1.0.5"
+  }
+}

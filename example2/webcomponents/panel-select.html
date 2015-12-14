@@ -1,0 +1,12 @@
+<template>
+    <option></option>
+</template>
+<script>
+    'use strict';
+    var basePrototype = Object.create(HTMLSelectElement.prototype);
+
+    document.registerElement('panel-select', {
+        prototype: basePrototype,
+        extends: 'select'
+    });
+</script>
