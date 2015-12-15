@@ -1,0 +1,57 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/iron-ajax/iron-ajax.html">
+<link rel="import" href="user-detele.html">
+<dom-module id="user-list">
+    <template>
+        <template is="dom-bind">
+            <iron-ajax
+                auto
+                url="http://localhost:3000/api/users"
+                method="get"
+                handle-as="json"
+                last-response="{{ajaxResponse}}"></iron-ajax>
+            <table class="table">
+                <tr>
+                    <td>Name</td>
+                    <td>Surname</td>
+                    <td>E-mail</td>
+                    <td>Role</td>
+                    <td>Actions</td>
+                </tr>
+                <template is="dom-repeat" items="{{ajaxResponse}}">
+                    <tr>
+                        <td>{{item.name}}</td>
+                        <td>{{item.surname}}</td>
+                        <td>{{item.email}}</td>
+                        <td>{{item.role}}</td>
+                        <td>
+                            <button class="btn btn-primary" onclick$="redirect('edit.html?id={{item._id}}')">Edit</button>
+                            <button class="btn btn-danger" onclick$="deleteUser({{item.id}})">Delete</button>
+                        </td>
+                    </tr>
+                </template>
+            </table>
+        </template>
+    </template>
+    <script>
+
+        function deleteUser(id) {
+            if(confirm('Are you sure?')) {
+                var ajax = documente.createElement('iron-ajax', {
+                    url : 'http://localhost:3000/api/users/' + id,
+                    method: 'delete'
+                });
+
+                ajax.generateRequest();
+
+            }
+        }
+
+        function redirect(url) {
+            window.location = url;
+        }
+        Polymer({
+            is: 'user-list'
+        })
+    </script>
+</dom-module>

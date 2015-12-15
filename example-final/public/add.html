@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add User</title>
+    <script type="text/javascript" src="bower_components/webcomponentsjs/webcomponents.js"></script>
+    <link rel="import" href="imports/imports.html">
+    <link rel="import" href="components/user-data.html">
+</head>
+<body>
+    <div class="col-md-12">
+        <h1>Add user</h1>
+        <form method="post" is="iron-form" action="http://localhost:3000/api/users">
+            <user-data></user-data>
+            <a class="btn btn-default" href="index.html">Back</a>
+            <button class="btn btn-primary" type="submit">Save</button>
+        </form>
+    </div>
+    <script type="text/javascript">
+        'use strict';
+
+        var form = document.querySelector('form');
+        form.addEventListener('iron-form-response', function() {
+            window.location = 'index.html';
+        });
+    </script>
+</body>
+</html>

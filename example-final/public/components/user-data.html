@@ -1,0 +1,80 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/iron-ajax/iron-ajax.html">
+<link rel="import" href="user-role.html">
+<dom-module id="user-data">
+    <template>
+        <template is="dom-bind">
+            <iron-ajax id="getuser"
+                       url=""
+                       method="get"
+                       handle-as="json"
+                       last-response="{{ajaxResponse}}"></iron-ajax>
+            </iron-ajax>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="name">Nombre</label>
+                        <input type="text" class="form-control" id="name" name="name" value="{{ajaxResponse.name}}" />
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="surname">Apellidos</label>
+                        <input type="text" class="form-control" id="surname" name="surname" value="{{ajaxResponse.surname}}" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input type="text" class="form-control" id="email" name="email" value="{{ajaxResponse.email}}" />
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="role">Role</label>
+                        <select is="user-role" class="form-control" id="role" name="role" value="{{ajaxResponse.role}}"></select>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <textarea id="description" class="form-control" name="description">{{ajaxResponse.description}}</textarea>
+                    </div>
+                </div>
+            </div>
+        </template>
+    </template>
+    <script>
+        Polymer({
+            is: 'user-data',
+            properties : {
+                edit: {
+                    type: Boolean,
+                    value: false
+                },
+                id: String
+            },
+            created: function() {
+                console.log('created');
+            },
+            ready: function() {
+
+            },
+            attached: function() {
+                if(this.edit === true) {
+                    console.log(this.edit);
+                    var getUserRequest = this.querySelector('#getuser');
+                    getUserRequest.url = 'http://localhost:3000/api/users/' + this.id;
+                    console.log(getUserRequest.toRequestOptions());
+                    getUserRequest.generateRequest();
+                }
+            },
+            detached : function() {
+                console.log('detached');
+            }
+        })
+    </script>
+</dom-module>

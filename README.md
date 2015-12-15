@@ -14,16 +14,14 @@ To install NodeJS:
 Bower is a package manager. To install follow the next steps:
 
  1. Open a terminal
- 2. Execute
-    `$ npm install -g bower`
+ 2. Execute `$ npm install -g bower`
 
 ## Example 1
 Hello world example. Only shows some basic web component using native js and polyfills to make runnable in almost all browsers.
 
 - panel-hello: shows "Hello 101 Panel Tech Days"
-- panel-message: shows errors and confirmations messages without parameters
-- panel-message-params: shows errors and confirmations message with parameters
-- panel-province-select: how extend HTML Elemenets
+- panel-message: shows errors and confirmations messages with parameters
+- panel-province-select: how extend HTML Elemenets, in this case an select element
 - panel-binding: How comunicate two web components (uses panel-province-select and panel-city-select)
 
 ## Example 2

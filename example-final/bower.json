@@ -1,0 +1,24 @@
+{
+  "name": "example-final",
+  "homepage": "https://github.com/jcerro/WebComponents",
+  "authors": [
+    "javier <javier.cerrolozano@intuitivesoft.es>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "~1.2.3",
+    "bootstrap": "~3.3.6",
+    "iron-ajax": "PolymerElements/iron-ajax#~1.1.1",
+    "iron-form": "PolymerElements/iron-form#~1.0.13"
+  }
+}
