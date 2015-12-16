@@ -1,0 +1,26 @@
+<template>
+    <p>Hello 101 Panel Tech Days</p>
+</template>
+<script>
+
+    //Obtain the base prototype
+    var basePrototype = Object.create(HTMLElement.prototype);
+
+    //Callback after component create
+    basePrototype.createdCallback = function() {
+        console.log('creado');
+
+        //Clone the base element
+        var clone = document.importNode(basePrototype, true);
+
+        //Create a shadow DOM and append the cloned template
+        this.appendChild(clone);
+    };
+
+
+    //Register the element
+    document.registerElement('panel-hello', {
+        prototype: basePrototype
+    });
+
+</script>

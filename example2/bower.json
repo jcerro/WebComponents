@@ -20,6 +20,8 @@
     "tests"
   ],
   "dependencies": {
-    "webcomponentsjs": "~0.7.19"
+    "webcomponentsjs": "~0.7.19",
+    "polymer": "~1.2.3",
+    "iron-ajax": "PolymerElements/iron-ajax#~1.1.1"
   }
 }

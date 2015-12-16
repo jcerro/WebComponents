@@ -1,0 +1,26 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<dom-module id="panel-message">
+    <template>
+        <p>
+            {{text}}<content></content>
+        </p>
+    </template>
+    <style>
+        p {
+            background-color: cornflowerblue;
+            color: white;
+        }
+    </style>
+    <script>
+        Polymer({
+            is: 'panel-message',
+            properties: {
+                text: String
+                /*text: {
+                    type: String,
+                    value: 'Default value - '
+                }*/
+            }
+        })
+    </script>
+</dom-module>

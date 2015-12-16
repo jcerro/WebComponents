@@ -1,0 +1,24 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/iron-ajax/iron-ajax.html">
+<dom-module id="panel-select-ajax">
+    <template>
+        <template is="dom-bind">
+            <iron-ajax
+                    auto
+                    url="../data/data.json"
+                    method="get"
+                    handle-as="json"
+                    last-response="{{ajaxResponse}}"></iron-ajax>
+            <option value="">Choose a province</option>
+            <template is="dom-repeat" items="{{ajaxResponse}}">
+                <option value="{{item.idprovincia}}">{{item.nombre}}</option>
+            </template>
+        </template>
+    </template>
+    <script>
+        Polymer({
+            is: 'panel-select-ajax',
+            extends: 'select'
+        });
+    </script>
+</dom-module>

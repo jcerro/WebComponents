@@ -1,0 +1,210 @@
+[
+  {
+    "idprovincia": 1,
+    "nombre": "Álava"
+  },
+  {
+    "idprovincia": 2,
+    "nombre": "Albacete"
+  },
+  {
+    "idprovincia": 3,
+    "nombre": "Alicante"
+  },
+  {
+    "idprovincia": 4,
+    "nombre": "Almería"
+  },
+  {
+    "idprovincia": 5,
+    "nombre": "Ávila"
+  },
+  {
+    "idprovincia": 6,
+    "nombre": "Badajoz"
+  },
+  {
+    "idprovincia": 7,
+    "nombre": "Baleares (Illes)"
+  },
+  {
+    "idprovincia": 8,
+    "nombre": "Barcelona"
+  },
+  {
+    "idprovincia": 9,
+    "nombre": "Burgos"
+  },
+  {
+    "idprovincia": 10,
+    "nombre": "Cáceres"
+  },
+  {
+    "idprovincia": 11,
+    "nombre": "Cádiz"
+  },
+  {
+    "idprovincia": 12,
+    "nombre": "Castellón"
+  },
+  {
+    "idprovincia": 13,
+    "nombre": "Ciudad Real"
+  },
+  {
+    "idprovincia": 14,
+    "nombre": "Córdoba"
+  },
+  {
+    "idprovincia": 15,
+    "nombre": "A Coruña"
+  },
+  {
+    "idprovincia": 16,
+    "nombre": "Cuenca"
+  },
+  {
+    "idprovincia": 17,
+    "nombre": "Girona"
+  },
+  {
+    "idprovincia": 18,
+    "nombre": "Granada"
+  },
+  {
+    "idprovincia": 19,
+    "nombre": "Guadalajara"
+  },
+  {
+    "idprovincia": 20,
+    "nombre": "Guipúzcoa"
+  },
+  {
+    "idprovincia": 21,
+    "nombre": "Huelva"
+  },
+  {
+    "idprovincia": 22,
+    "nombre": "Huesca"
+  },
+  {
+    "idprovincia": 23,
+    "nombre": "Jaén"
+  },
+  {
+    "idprovincia": 24,
+    "nombre": "León"
+  },
+  {
+    "idprovincia": 25,
+    "nombre": "Lleida"
+  },
+  {
+    "idprovincia": 26,
+    "nombre": "La Rioja"
+  },
+  {
+    "idprovincia": 27,
+    "nombre": "Lugo"
+  },
+  {
+    "idprovincia": 28,
+    "nombre": "Madrid"
+  },
+  {
+    "idprovincia": 29,
+    "nombre": "Málaga"
+  },
+  {
+    "idprovincia": 30,
+    "nombre": "Murcia"
+  },
+  {
+    "idprovincia": 31,
+    "nombre": "Navarra"
+  },
+  {
+    "idprovincia": 32,
+    "nombre": "Ourense"
+  },
+  {
+    "idprovincia": 33,
+    "nombre": "Asturias"
+  },
+  {
+    "idprovincia": 34,
+    "nombre": "Palencia"
+  },
+  {
+    "idprovincia": 35,
+    "nombre": "Las Palmas"
+  },
+  {
+    "idprovincia": 36,
+    "nombre": "Pontevedra"
+  },
+  {
+    "idprovincia": 37,
+    "nombre": "Salamanca"
+  },
+  {
+    "idprovincia": 38,
+    "nombre": "Santa Cruz de Tenerife"
+  },
+  {
+    "idprovincia": 39,
+    "nombre": "Cantabria"
+  },
+  {
+    "idprovincia": 40,
+    "nombre": "Segovia"
+  },
+  {
+    "idprovincia": 41,
+    "nombre": "Sevilla"
+  },
+  {
+    "idprovincia": 42,
+    "nombre": "Soria"
+  },
+  {
+    "idprovincia": 43,
+    "nombre": "Tarragona"
+  },
+  {
+    "idprovincia": 44,
+    "nombre": "Teruel"
+  },
+  {
+    "idprovincia": 45,
+    "nombre": "Toledo"
+  },
+  {
+    "idprovincia": 46,
+    "nombre": "Valencia"
+  },
+  {
+    "idprovincia": 47,
+    "nombre": "Valladolid"
+  },
+  {
+    "idprovincia": 48,
+    "nombre": "Vizcaya"
+  },
+  {
+    "idprovincia": 49,
+    "nombre": "Zamora"
+  },
+  {
+    "idprovincia": 50,
+    "nombre": "Zaragoza"
+  },
+  {
+    "idprovincia": 51,
+    "nombre": "Ceuta"
+  },
+  {
+    "idprovincia": 52,
+    "nombre": "Melilla"
+  }
+]

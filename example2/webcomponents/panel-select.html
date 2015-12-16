@@ -1,12 +1,14 @@
-<template>
-    <option></option>
-</template>
-<script>
-    'use strict';
-    var basePrototype = Object.create(HTMLSelectElement.prototype);
-
-    document.registerElement('panel-select', {
-        prototype: basePrototype,
-        extends: 'select'
-    });
-</script>
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<dom-module id="panel-select">
+    <template>
+        <option value="">Choose an option</option>
+        <option value="1">Option 1</option>
+        <option value="2">Option 2</option>
+    </template>
+    <script>
+        Polymer({
+            is: 'panel-select',
+            extends: 'select'
+        });
+    </script>
+</dom-module>
