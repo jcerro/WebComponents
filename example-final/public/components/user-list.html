@@ -24,9 +24,10 @@
                         <td>{{item.surname}}</td>
                         <td>{{item.email}}</td>
                         <td>{{item.role}}</td>
-                        <td>
+                        <td>                            
                             <button class="btn btn-primary" onclick$="redirect('edit.html?id={{item._id}}')">Edit</button>
-                            <button class="btn btn-danger" onclick$="deleteUser({{item.id}})">Delete</button>
+                            <!--<button  is="user-delete" user-delete-id="{{item.id}}">Delete</button> -->
+                            <user-delete user-id="{{item._id}}"></user-delete>
                         </td>
                     </tr>
                 </template>
@@ -35,17 +36,7 @@
     </template>
     <script>
 
-        function deleteUser(id) {
-            if(confirm('Are you sure?')) {
-                var ajax = documente.createElement('iron-ajax', {
-                    url : 'http://localhost:3000/api/users/' + id,
-                    method: 'delete'
-                });
-
-                ajax.generateRequest();
-
-            }
-        }
+        
 
         function redirect(url) {
             window.location = url;

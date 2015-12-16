@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Edit User</title>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
     <script type="text/javascript" src="bower_components/webcomponentsjs/webcomponents.js"></script>
     <link rel="import" href="imports/imports.html">
     <link rel="import" href="components/user-data.html">
@@ -14,9 +17,13 @@
         <user-data edit="true"></user-data>
         <a class="btn btn-default" href="index.html">Back</a>
         <button class="btn btn-primary" type="submit">Save</button>
-    </form>
+    </form>    
     <script type="text/javascript">
         'use strict';
+
+        function getURLParameter(name) {
+            return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search)||[,""])[1].replace(/\+/g, '%20'))||null
+        }
 
         var id = getURLParameter('id');
         var userData = document.querySelector('user-data');

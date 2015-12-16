@@ -1,13 +1,39 @@
 <link rel="import" href="../bower_components/polymer/polymer.html">
 <link rel="import" href="../bower_components/iron-ajax/iron-ajax.html">
 <dom-module id="user-delete">
+	<template>		
+		<iron-ajax        				
+    		handle-as="json"
+    		lastResponse="handleResponse"></iron-ajax>
+		<button class="btn btn-danger">Delete</button>
+	</template>
     <script type="text/javascript">
-        Polymer({
-            is: 'user-delete',
-            extends: 'button',
-            properties : {
-                id: String
-            }
-        });
+    	(function() {
+    		'use strict';
+
+			var idUser;
+
+    		Polymer({
+	            is: 'user-delete',
+	            properties : {
+	                userId: String
+	            },
+	            attached: function() {	            	
+	            	this.addEventListener('click', this.deleteUser);
+	            },	            
+	            deleteUser: function() {
+					if(confirm('Are you sure?')) {	            		            		
+	            		var ajax = document.createElement('iron-ajax', {});
+    					ajax.url = 'http://localhost:3000/api/users/' + this.userId;
+    					ajax.method = 'delete';    					
+    					ajax.addEventListener('response', this.handleResponse);
+    					ajax.generateRequest();
+	            	}
+	            },
+	            handleResponse: function(request) {
+	            	window.location = 'index.html';	
+	            }
+	        });	       
+    	})();        
     </script>
 </dom-module>
