@@ -1,11 +1,5 @@
 <template>
-    <style>
-        p {
-            background-color: cornflowerblue;
-            color: white;
-        }
-    </style>
-    <p></p>
+    <p>Hello 101 Panel Tech Days</p>
 </template>
 <script>
     //Obtain the base prototype
@@ -19,24 +13,13 @@
         //Clone the template
         var clone = document.importNode(templateContent, true);
 
-        //Read a property
-        var property = '';
-        if(this.hasAttribute('text')) {
-            property += this.getAttribute('text');
-        }
-
-        //Obtain the content of the element
-        var content = this.innerHTML;
-        var paragraph = clone.querySelector('p');
-        paragraph.innerHTML = property + ' ' + content;
-
         //Add the cloned child to the element
-        this.createShadowRoot().appendChild(clone);
+        this.appendChild(clone);
     };
 
 
     //Register the element
-    document.registerElement('panel-message', {
+    document.registerElement('panel-hello-2', {
         prototype: basePrototype
     });
 </script>

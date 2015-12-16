@@ -1,0 +1,29 @@
+<template>
+    <option value="">Choose an option</option>
+    <option value="1">Option 1</option>
+    <option value="2">Option 2</option>
+</template>
+<script>
+    //Obtain the base prototype
+    var basePrototype = Object.create(HTMLSelectElement.prototype);
+
+    //Access to template (ugly) uses _currentScript by polyfills use
+    var templateContent = document._currentScript.ownerDocument.querySelector('template');
+
+    //Callback after component create
+    basePrototype.createdCallback = function() {
+        //Clone the template
+        var clone = templateContent.cloneNode(true);
+
+
+        //Add the cloned child to the element
+        this.innerHTML = clone.innerHTML;
+    };
+
+
+    //Register the element
+    document.registerElement('panel-select', {
+        prototype: basePrototype,
+        extends: 'select'
+    });
+</script>
